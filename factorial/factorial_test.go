@@ -3,6 +3,7 @@ package factorial
 import (
 	"github.com/stretchr/testify/assert"
 	"testing"
+    "errors"
 )
 
 type Result struct {
@@ -21,6 +22,7 @@ func TestUnitFactorial(t *testing.T) {
 			{1, Result{1, nil}},
 			{2, Result{2, nil}},
 			{3, Result{6, nil}},
+			{-1, Result{0, errors.New("factorial of negative number is undefined")}},
 		}
 
 	for _, test := range tests {
