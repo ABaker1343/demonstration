@@ -1,4 +1,4 @@
-module factorial
+module demonstration
 
 go 1.20
 
